@@ -1,0 +1,98 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  } 
+  
+  .navbar-items {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-items li {
+    margin: 0;
+  }
+  
+  .navbar-items a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .hamburger {
+    display: none;
+    cursor: pointer;
+  }
+  .closed-icon {
+    display: none;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile svg {
+    cursor: pointer;
+  }
+  
+  @media (max-width: 390px) {
+    .navbar-items {
+      display: none;
+      flex-direction: column;
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+  
+    .navbar-items.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger svg {
+      color: white;
+    }
+
+  }
+  
+  @media (min-width: 391px) and (max-width: 768px) {
+    .hamburger svg {
+      font-size: 20px; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      padding: 15px 20px;
+    }
+  
+    .navbar-items li {
+      font-size: 16px;
+    }
+  
+    .profile svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
